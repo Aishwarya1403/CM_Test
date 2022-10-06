@@ -18,13 +18,13 @@ def create_app(test_config=None):
         response.headers.add('Access-Control-Allow-Methods', 'GET,PATCH,POST,DELETE,OPTIONS')
         return response
 
-    @app.route('/', methods =['GET'])
-    def say_hi():
-        print(chartmogul.Ping.ping(config).get())
-        return jsonify({
-            "success" : True,
-            "say" : "hi"
-        })
+    # @app.route('/', methods =['GET'])
+    # def say_hi():
+    #     print(chartmogul.Ping.ping(config).get())
+    #     return jsonify({
+    #         "success" : True,
+    #         "say" : "hi"
+    #     })
 
     @app.route('/getmrr', methods = ['GET','POST'])
     def get_info():
